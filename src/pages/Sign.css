@@ -1,0 +1,166 @@
+*{padding: 0;
+margin: 0;
+box-sizing: border-box;}
+
+
+
+.for {
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
+}
+
+.rou {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.text input {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.text input:focus {
+  border-color: #fda085;
+  outline: none;
+  box-shadow: 0 0 8px rgba(253, 160, 133, 0.3);
+}
+
+.text button {
+  padding: 12px;
+  background: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.text button:hover {
+  background: #e85d4f;
+}
+
+@media only screen and (max-width:455px){
+ 
+  .for {
+    padding: 15px;
+    min-height: auto;
+    flex-direction: column;
+  }
+
+  .rou {
+    padding: 30px 20px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  form h2 {
+    font-size: 29px;
+    margin-bottom: 20px;
+  }
+
+  .text {
+    gap: 14px;
+  }
+
+  .text input {
+    font-size: 17px;
+    padding: 10px 12px;
+  }
+
+  .text button {
+    font-size: 20px;
+    letter-spacing: 3px;
+    padding: 10px;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .for {
+    padding: 18px;
+    min-height: 12vh; 
+  }
+
+  .rou {
+    padding: 32px 22px;
+    max-width: 360px;   
+    border-radius: 12px;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+    animation-duration: 0.45s;
+  }
+
+  form h2 {
+    font-size: 22px;    
+    margin-bottom: 20px;
+  }
+
+  .text {
+    gap: 14px;
+  }
+
+  .text input {
+    padding: 10px 12px;
+    font-size: 15px;
+    border-radius: 7px;
+  }
+
+  .text input:focus {
+    box-shadow: 0 0 6px rgba(253,160,133,0.25);
+  }
+
+  .text button {
+    padding: 11px;
+    font-size: 15px;
+    border-radius: 7px;
+  }
+}
+
+
+
+
+
+
+
+

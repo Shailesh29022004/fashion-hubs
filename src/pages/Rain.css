@@ -1,0 +1,406 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.rainn,
+.coat {
+  font-family: 'Poppins', sans-serif;
+  color: #1f1f1f;
+}
+
+.rainn {
+    margin: 15px;
+    border-radius: 20px;
+  background: linear-gradient(90deg, #fcb1b1, #dcb0ff, #fcb1b1);
+  background-size: 300% ;
+  animation: dreamySlide 12s ease infinite;
+  padding: 60px 20px;
+  overflow: hidden;
+}
+
+@keyframes dreamySlide {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.be {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Floating animation on images */
+.ue img,
+.uo img {
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  animation: floatImage 3s ease-in-out infinite;
+  transition: transform 0.3s;
+  max-width: 100%;
+}
+
+@keyframes floatImage {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.ready {
+  max-width: 400px;
+  animation: textDrop 1.2s ease-out;
+}
+
+@keyframes textDrop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ready h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #0a4d8c;
+  margin-bottom: 10px;
+}
+
+.ready p {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #444;
+}
+
+.ready h2 {
+  font-size: 24px;
+  color: #04517a;
+  letter-spacing: 1px;
+  font-style: italic;
+  border-left: 5px solid #0a4d8c;
+  padding-left: 12px;
+}
+
+@media only screen and (max-width:455px){
+  .rainn {
+    padding: 40px 15px;
+    margin: 10px;
+    border-radius: 15px;
+    background-size: 400%; /* smoother animation on smaller screen */
+  }
+
+  .be {
+    flex-direction: column;
+    gap: 25px;
+    padding: 10px 0;
+  }
+
+  .ue img,
+  .uo img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 16px;
+  }
+
+  .ready {
+    max-width: 100%;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .ready h1 {
+    font-size: 32px;
+  }
+
+  .ready p {
+    font-size: 16px;
+  }
+
+  .ready h2 {
+    font-size: 18px;
+    padding-left: 8px;
+    border-left-width: 4px;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .rainn {
+    padding: 60px 16px;
+    margin: 10px;
+    border-radius: 16px;
+  }
+
+  .be {
+    gap: 28px;
+    flex-direction: row; /* keep side by side but with smaller gap */
+  }
+
+  .ue img,
+  .uo img {
+    max-width: 110%;
+    border-radius: 16px;
+  }
+
+  .ready {
+    max-width: 340px;
+  }
+
+  .ready h1 {
+    font-size: 45px;
+    margin-bottom: 8px;
+  }
+
+  .ready p {
+    font-size: 19px;
+    margin: 8px 0;
+  }
+
+  .ready h2 {
+    font-size: 25px;
+    padding-left: 10px;
+  }
+}
+
+
+
+
+/* Coat Product Section */
+.coat {
+  background-color: #fdfdfd;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 5px solid #a1c4fd;
+}
+
+.coat h1 {
+  font-size: 44px;
+  color: #111;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.rcoat {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 35px;
+  justify-items: center;
+}
+
+.rcoat > div {
+  background-color: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  width: 100%;
+  max-width: 280px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rcoat > div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.rcoat img {
+  border-radius: 12px;
+  margin-bottom: 16px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.rcoat img:hover {
+  transform: scale(1.03);
+}
+
+.rcoat h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #212121;
+}
+
+.rcoat h6 {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.rcoat p {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #0a4d8c;
+}
+
+.starrating::before {
+ 
+  color: #f5c518;
+  font-size: 18px;
+}
+
+.rai {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.rai button {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  height: 4vh;
+  border: none;
+  border-radius: 10px;
+  width: 70%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.rai button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0.2), rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+  transform: skewX(-20deg);
+}
+
+.rai button:hover::before {
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    left: 125%;
+  }
+}
+
+@media only screen and (max-width:455px){
+  .coat {
+    padding: 40px 15px;
+  }
+
+  .coat h1 {
+    font-size: 33px;
+    margin-bottom: 25px;
+    letter-spacing: 5px;
+  }
+
+  .rcoat {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .rcoat > div {
+    padding: 18px;
+    max-width: 90%;
+  }
+
+  .rcoat h1 {
+    font-size: 25px;
+  }
+
+  .rcoat h6 {
+    font-size: 16px;
+  }
+
+  .rcoat p {
+    font-size: 20px;
+  }
+
+  .rcoat img {
+    margin-bottom: 12px;
+  }
+
+  
+  .rai {
+    margin-top: 10px;
+  }
+
+  .rai button {
+    font-size: 15px;
+    height: 40px;
+    width: 85%;
+  }
+}
+
+/* 📱 Tablet Responsive */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .coat {
+    padding: 50px 16px;
+  }
+
+  .coat h1 {
+    font-size: 39px;
+    margin-bottom: 30px;
+  }
+
+  .rcoat {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+  }
+
+  .rcoat > div {
+    max-width: 240px;
+    padding: 20px;
+  }
+
+  .rcoat img {
+    border-radius: 10px;
+    margin-bottom: 14px;
+  }
+
+  .rcoat h1 {
+    font-size: 20px;
+  }
+
+  .rcoat h6 {
+    font-size: 16px;
+  }
+
+  .rcoat p {
+    font-size: 19px;
+  }
+
+  .starrating::before {
+    font-size: 16px;
+  }
+
+  .rai button {
+    font-size: 15px;
+    width: 80%;
+    height: 42px;
+    border-radius: 8px;
+  }
+}
